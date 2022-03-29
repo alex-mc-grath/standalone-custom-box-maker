@@ -1,0 +1,31 @@
+footer {
+  position: relative;
+  @include flexContainer(column, center, center);
+  color: $dark-color;
+  background: $light-grey;
+  clear: both;
+  bottom:0;
+  width: 100%;
+  
+
+  hr {
+    width: 85%;
+    margin: 0;
+border-top: 0.5px solid lightgray;
+  }
+
+  span {
+    transform: translate(-50%, -50%);
+    bottom: 50%;
+    left: 50%;
+  }
+
+  p {
+    bottom: 0%;
+    left: 50%;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    margin:auto;
+    padding: 5rem 2rem;
+  }
+}

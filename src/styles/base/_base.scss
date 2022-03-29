@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;500;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;500;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: $m-size;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+.is-active {
+  font-weight: bold;
+}
+
+/* Headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+}
+
+h2 {
+  letter-spacing: -1px;
+}
+
+p {
+  // font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+  color: $dark-color;
+}
+
+.bold{
+  font-weight: 500;
+}
+
+.gradient-color{
+  background: -webkit-linear-gradient(-120deg, $secondary-color, #1f4df1);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
+.gradient-color2{
+  background: -webkit-linear-gradient(-120deg, $secondary-color, $tertiary-color);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
+.gradient-color3{
+  background: -webkit-linear-gradient(-120deg, $primary-color,$primary-color,);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
+
+
+/*  Mixins  */
+
+@mixin flexContainer($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+

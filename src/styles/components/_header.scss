@@ -1,0 +1,195 @@
+header {
+  @include flexContainer(row, flex-start, center);
+  position: fixed;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  // background: white;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 3px rgba(255, 255, 255, 0.5);
+
+
+  .logo-header{
+    
+    left: 3rem;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  ul {
+    @include flexContainer(column, center, center);
+    position: absolute;
+    background: white;
+    // display: none;
+    opacity: 0;
+    top: 9vh;
+    padding: 0;
+    // justify-content: space-evenly;
+    width: 100%;
+    height: 0vh;
+    // margin-left: auto;
+    // margin-right: 2rem;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transform: translateY(-4rem);
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+    
+
+
+    &.show{
+      opacity: 1;
+      transform: translateY(0rem);
+      display: flex;
+      height: 90vh;
+    }
+
+    a {
+      background: -webkit-linear-gradient(-120deg, $secondary-color, #1f4df1);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  .nav-hamburger {
+    position: absolute;
+    font-size: 3rem;
+    right: 2rem;
+    // display: none;
+    width: 50px;
+    height: 50px;
+    // border: 2px solid black;
+    border:none;
+    background-color: transparent;
+
+    span{
+      color: #000;
+    }
+
+    
+  }
+
+  .nav-hamburger {
+    width: 40px;
+    height: 25px;
+    position: relative;
+    // margin: 0 1rem;
+    // margin: 8px 36px;
+    margin-left:auto;
+    // margin: 50px auto;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateX(10px);
+
+      span:nth-child(1) {
+        transform: rotate(45deg);
+        width: 50%;
+        background: darken($secondary-color, 90%);
+      }
+
+      span:nth-child(2) {
+        transform: rotate(-45deg);
+        width: 50%;
+        height: 20%;
+        background: darken($secondary-color, 20%);
+      }
+
+      span:nth-child(3) {
+        transform: rotate(45deg);
+        width: 50%;
+        height: 20%;
+        top: 0;
+        background: $secondary-color;
+      }
+    }
+
+    span {
+      display: block;
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      // background: -webkit-linear-gradient(220deg, $secondary-color, $secondary-color);
+      background: black;
+      opacity: 0.95;
+      -webkit-text-fill-color: transparent;
+      border-radius: 9px;
+
+      left: 0;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -webkit-transition: 0.25s ease-in-out;
+      -moz-transition: 0.25s ease-in-out;
+      -o-transition: 0.25s ease-in-out;
+      transition: 0.25s ease-in-out;
+    }
+  }
+
+  .nav-hamburger span:nth-child(1) {
+    top: 0px;
+  }
+
+  .nav-hamburger span:nth-child(2) {
+    top: 12px;
+  }
+
+  .nav-hamburger span:nth-child(3) {
+    top: 24px;
+  }
+
+  .nav-hamburger:focus {
+    outline: none;
+    user-select: none;
+  }
+
+  // open
+  .nav-hamburger.open {
+    // height: 30px;
+  }
+
+  .nav-hamburger.open span:nth-child(1) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+  }
+
+  .nav-hamburger.open span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    width: 70%;
+    height: 17%;
+    left: 0%;
+  }
+
+  .nav-hamburger.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 12px;
+    width: 70%;
+    height: 17%;
+    left: 0%;
+  }
+
+
+  
+}
